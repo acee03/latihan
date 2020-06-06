@@ -9,7 +9,8 @@ function capital(str) {
     }
 
     for (var i = 0; i < split.length; i++) {
-        split[i] = split[i].charAt(0).toUpperCase().replace(re, split => x[split]) + split[i].substring(1).replace(re, split => x[split]);
+        split[i] = split[i].charAt(0).toUpperCase().replace(re, split => x[split]) +
+            split[i].substring(1).replace(re, split => x[split]);
     }
 
     return split.join(' ');
