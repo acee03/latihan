@@ -13,4 +13,4 @@ function jam(str1, str2) {
     return `Biaya Parkir anda sebesar Rp ${harga}`;
 }
 
-console.log(jam('11:30', '14:10'));
+console.log(jam('09:30', '14:10'));
