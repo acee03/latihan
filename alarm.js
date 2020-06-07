@@ -10,13 +10,15 @@ function alarm(str) {
     selisihJam = jamAlarm - h;
     selisihMenit = menitAlarm + m - 60;
 
+
     if (selisihMenit < 0) {
         selisihJam--;
         return `Alarm set for ${Math.abs(selisihMenit)} minutes from now`
     }
 
-
-
+    if (selisihJam > 0) {
+        return `Alarm set for ${selisihJam} hours ${selisihMenit} minutes from now`
+    }
 }
 
-console.log(alarm('15:10'))
+console.log(alarm('16:05'))
