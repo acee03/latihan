@@ -4,16 +4,19 @@ function alarm(str) {
     let m = d.getMinutes();
     let split = str.split(":");
 
-    let dh = Math.abs(h - split[0]);
-    let dm = Math.abs(m - split[1]);
+    jamAlarm = split[0];
+    menitAlarm = split[1];
 
-    if (dh == 0) {
-        return `Alarm set for ${dm} minutes from now`
-    } else {
-        return `Alarm set for ${dh} hours and ${dm} minutes from now`
+    selisihJam = jamAlarm - h;
+    selisihMenit = menitAlarm + m - 60;
+
+    if (selisihMenit < 0) {
+        selisihJam--;
+        return `Alarm set for ${Math.abs(selisihMenit)} minutes from now`
     }
+
+
 
 }
 
-console.log(alarm('11:45'))
-console.log(alarm('13:30'))
+console.log(alarm('15:10'))
