@@ -49,6 +49,7 @@ update(2, 'test', 19, 'test');
 console.log(karyawan);
 hapus(2);
 console.log(karyawan);
+console.log("tets");
 
 
 
